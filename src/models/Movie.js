@@ -28,7 +28,7 @@ class Movie extends Model {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      sessions: {
+      schedules: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
       },

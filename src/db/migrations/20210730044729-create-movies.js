@@ -35,7 +35,7 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        sessions: {
+        schedules: {
           type: Sequelize.ARRAY(Sequelize.STRING),
           allowNull: false,
         },
