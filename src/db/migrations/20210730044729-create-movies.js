@@ -24,11 +24,11 @@ module.exports = {
           allowNull: false,
         },
         start_date: {
-          type: Sequelize.STRING,
+          type: Sequelize.DATEONLY,
           allowNull: false,
         },
         end_date: {
-          type: Sequelize.STRING,
+          type: Sequelize.DATEONLY,
           allowNull: false,
         },
         banner: {

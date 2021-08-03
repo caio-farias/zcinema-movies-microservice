@@ -17,11 +17,11 @@ class Movie extends Model {
         allowNull: true,
       },
       start_date:{
-        type: DataTypes.STRING,
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       end_date:{
-        type: DataTypes.STRING,
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       banner:      {
