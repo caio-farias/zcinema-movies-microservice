@@ -10,7 +10,7 @@ module.exports = {
       start_date,
       end_date,
       banner,
-      sessions
+      schedules
     } = req.body
 
     try {
@@ -25,12 +25,11 @@ module.exports = {
         start_date,
         end_date,
         banner,
-        sessions
+        schedules
       })
 
       return res.status(201).json(movie)
     } catch (error) {
-      console.log(error)
       return res.status(500).json({ message: "Ocorreu um erro, tente novamente." })
     }
   },
@@ -71,7 +70,6 @@ module.exports = {
       })
 
     } catch (error) {
-      console.log(error)
       return res.status(500).json({ message: "Ocorreu um erro, tente novamente." })
     }
   },
@@ -96,7 +94,7 @@ module.exports = {
       start_date,
       end_date,
       banner,
-      sessions
+      schedules
 
     } = req.body
 
@@ -106,13 +104,13 @@ module.exports = {
         return res.status(409).json({ message: "Filme não existe." })
       }
       movie.update({
-        title: title, 
-        description: description, 
-        trailer: trailer,
-        start_date: start_date,
-        end_date: end_date,
-        banner: banner,
-        sessions: sessions,
+        title, 
+        description, 
+        trailer,
+        start_date,
+        end_date,
+        banner,
+        schedules,
 
       }, { where: { id: id } })
       return res.json(movie)
